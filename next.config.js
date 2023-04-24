@@ -1,8 +1,16 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+
+const isProduction = process.env.NODE_ENV === "production";
+
+const config = {
   experimental: {
     appDir: true,
   },
-}
+};
 
-module.exports = nextConfig
+const nextConfig = require("next-pwa")({
+  dest: "public",
+  swSrc: "./service-worker.js",
+})(config);
+
+module.exports = nextConfig;

@@ -1,0 +1,21 @@
+{
+  "name": "Training tracker",
+  "short_name": "trainig-tracker",
+  "icons": [
+    {
+      "src": "/vercel.svg",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/vercel.svg",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#000",
+  "background_color": "#000",
+  "start_url": "/dashboard",
+  "display": "standalone",
+  "orientation": "portrait"
+}
