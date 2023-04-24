@@ -8,16 +8,8 @@ const chartInfo = {
 };
 
 export default async function Test() {
-  const datas = await getData();
   return (
     <>
-      <select name="select" id="" className={classes.select}>
-        {datas.map((data: any) => (
-          <option key={data.id} value={data.name}>
-            {data.name}
-          </option>
-        ))}
-      </select>
       <div className={classes.container}>
         <div className={classes.testDiv}>
           <Chart title="adasda" chartData={chartInfo} />
@@ -31,12 +23,4 @@ export default async function Test() {
       </div>
     </>
   );
-}
-
-async function getData() {
-  const res = await fetch("http://localhost:3000/api/exercice", {
-    method: "GET",
-  });
-
-  return res.json();
 }
